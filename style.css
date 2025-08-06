@@ -1,0 +1,139 @@
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    margin: 0;
+    background: #f4f7fb;
+    color: #222;
+}
+
+.header {
+    background: #14285f;
+    color: #fff;
+    text-align: center;
+    padding: 2rem 1rem 1rem 1rem;
+    position: relative;
+}
+
+.logo {
+    width: 120px;
+    height: 120px;
+    margin-bottom: 10px;
+    border-radius: 50%;
+    box-shadow: 0 6px 24px rgba(20,40,95,0.2);
+    background: #fff;
+}
+
+h1 {
+    margin: 0;
+    font-size: 2rem;
+    letter-spacing: 1px;
+}
+
+h2 {
+    font-weight: 400;
+    margin-top: 0.3rem;
+    font-size: 1.2rem;
+    color: #bcd2ff;
+}
+
+.info, .contacto {
+    background: #fff;
+    margin: 2rem auto 1rem auto;
+    padding: 1.5rem;
+    max-width: 600px;
+    border-radius: 16px;
+    box-shadow: 0 2px 12px rgba(20,40,95,0.09);
+}
+
+.ubicacion {
+    margin-top: 1rem;
+    font-size: 1.05rem;
+    color: #14285f;
+    font-weight: bold;
+}
+
+.galeria {
+    max-width: 900px;
+    margin: 2rem auto 1rem auto;
+    padding: 1rem;
+}
+
+.imagenes {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.galeria-img {
+    width: 260px;
+    height: 170px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 3px 12px rgba(20,40,95,0.10);
+    transition: transform 0.4s;
+}
+
+.galeria-img:hover {
+    transform: scale(1.06) rotate(-2deg);
+    box-shadow: 0 6px 24px rgba(20,40,95,0.15);
+}
+
+.boton-contacto {
+    display: inline-block;
+    margin-top: 1rem;
+    background: #14285f;
+    color: #fff;
+    padding: 0.8rem 2rem;
+    border-radius: 24px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+.boton-contacto.whatsapp {
+    background: #25d366;
+    color: #fff;
+    margin-left: 10px;
+}
+.boton-contacto.whatsapp:hover {
+    background: #128c7e;
+}
+
+.boton-contacto:hover {
+    background: #1c39a1;
+}
+
+footer {
+    text-align: center;
+    padding: 1rem 0;
+    background: #14285f;
+    color: #fff;
+    margin-top: 2rem;
+    font-size: 0.9rem;
+}
+
+/* Animaciones */
+.animate-pop {
+    animation: popin 1.2s cubic-bezier(.23,1.5,.32,1) backwards;
+}
+@keyframes popin {
+    0% { transform: scale(0.7); opacity: 0; }
+    80% { transform: scale(1.12); opacity: 1; }
+    100% { transform: scale(1); }
+}
+.animate-fade {
+    animation: fadein 1s ease backwards;
+}
+@keyframes fadein {
+    from { opacity: 0; transform: translateY(-20px);}
+    to { opacity: 1; transform: translateY(0);}
+}
+.animate-slide {
+    animation: slideIn 1.2s cubic-bezier(.23,1.5,.32,1) backwards;
+}
+@keyframes slideIn {
+    from { opacity: 0; transform: translateX(-40px);}
+    to { opacity: 1; transform: translateX(0);}
+}
+.animate-img {
+    animation: fadein 1.4s ease backwards;
+}
